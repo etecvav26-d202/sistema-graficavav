@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost';
-$dbname = 'grafica_vav';
+$dbname = 'graficavav';
 $user = 'root';
 $senha = '';
 
