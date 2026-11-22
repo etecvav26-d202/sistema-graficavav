@@ -54,8 +54,8 @@ sistema-graficavav/
 │   └── relatorios.php
 │
 ├── assets/
-│   ├── css/
-│   ├── js/
+│   ├── style.css
+│   ├── script.js
 │   └── img/
 │
 ├── config/
