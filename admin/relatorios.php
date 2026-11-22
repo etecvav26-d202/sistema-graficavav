@@ -3,7 +3,7 @@
 require_once '../includes/auth.php';
 require_once '../config/conexao.php';
 
-if (!in_array($_SESSION['nivel_acesso'], ['admin', 'gerente'])) {
+if (!in_array($_SESSION['nivel_acesso'], ['administrador', 'gerente'])) {
     die("Você não tem permissão para acessar esta página.");
 }
 
