@@ -2,8 +2,6 @@
 
 Sistema web desenvolvido para auxiliar no gerenciamento interno de uma gráfica, permitindo organizar funcionários, clientes, produtos, serviços, pedidos, vendas e estoque.
 
-> **Atenção:** os arquivos e atualizações do projeto estão disponíveis exclusivamente na branch `beta` do repositório. A branch `main` não contém a versão atual do sistema.
-
 ## 🎯 Objetivo
 
 Desenvolver um sistema de gerenciamento que facilite o controle das atividades de uma gráfica, centralizando informações e tornando os processos administrativos mais organizados e eficientes.
