@@ -11,10 +11,8 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Gestão Gráfica | EtecVAV</title>
-
-    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -40,7 +38,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
             </nav>
 
             <div class="sidebar-footer">
-                <a href="../logout.php">Sair do sistema</a>
+                <a href="logout.php">Sair do sistema</a>
             </div>
 
         </aside>
