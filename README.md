@@ -54,8 +54,8 @@ sistema-graficavav/
 │   └── relatorios.php
 │
 ├── assets/
-│   ├── css/
-│   ├── js/
+│   ├── style.css
+│   ├── script.js
 │   └── img/
 │
 ├── config/
@@ -85,6 +85,14 @@ sistema-graficavav/
 | [Amanda Neves Oliveira](https://github.com/amandanevoli) | 04 | 2º ano D |
 | [Ana Lívia Takeyama Romanato](https://github.com/liviatakeyama) | 06 | 2º ano D |
 | [Isabelli Dias da Silva](https://github.com/isabelbelli) | 19 | 2º ano D |
+
+## Declaração de Uso de Inteligência Artificial
+
+Para o desenvolvimento deste projeto, foi utilizada a ferramenta de Inteligência Artificial ChatGPT como recurso complementar de apoio técnico e orientação durante o processo de implementação.
+
+Sua utilização esteve direcionada ao esclarecimento de dúvidas, à elaboração e revisão de códigos em PHP, HTML e CSS, à identificação e correção de erros, à organização e estruturação do banco de dados, ao aprimoramento da interface gráfica e à elaboração da documentação do sistema.
+
+Ressalta-se que os conteúdos e as sugestões fornecidos pela ferramenta foram analisados, adaptados e submetidos a testes, conforme as necessidades e os requisitos estabelecidos para o projeto. A ferramenta foi utilizada como instrumento de auxílio, não substituindo o processo de desenvolvimento, análise e validação realizado durante a execução do trabalho.
 
 ## 
 
