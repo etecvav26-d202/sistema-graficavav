@@ -38,7 +38,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
             </nav>
 
             <div class="sidebar-footer">
-                <a href="logout.php">Sair do sistema</a>
+                <a href="../logout.php">Sair do sistema</a>
             </div>
 
         </aside>
