@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-box">
 
             <div class="login-logo">
-                <img src="" alt="Logo Etec">
+                <img src="assets/img/escola-tecnica.png" alt="Logo Etec">
             </div>
 
             <div class="login-titulo">
