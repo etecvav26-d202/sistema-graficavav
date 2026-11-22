@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require_once 'config/conexao.php';
@@ -36,28 +37,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login | Gestão Gráfica</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
 
-<div class="login-container">
-    <div class="login-box">
-        <h1>Gestão Gráfica</h1>
-        <p>EtecVAV</p>
+<body class="login-page">
 
-        <?php if ($erro): ?>
-            <p class="erro"><?php echo $erro; ?></p>
-        <?php endif; ?>
+    <div class="login-container">
 
-        <form method="POST">
-            <label>E-mail</label>
-            <input type="email" name="email" required>
+        <div class="login-box">
 
-            <label>Senha</label>
-            <input type="password" name="senha" required>
+            <div class="login-logo">
+                <img src="" alt="Logo Etec">
+            </div>
 
-            <button type="submit">Entrar</button>
-        </form>
+            <div class="login-titulo">
+                <h1>Gestão Gráfica</h1>
+                <span>ETECVAV</span>
+                <p>Sistema de gerenciamento interno</p>
+            </div>
+
+            <div class="login-divisor"></div>
+
+            <div class="login-formulario">
+
+                <h2>Acesse sua conta</h2>
+                <p>Entre com suas credenciais para continuar.</p>
+
+                <?php if ($erro): ?>
+                    <div class="login-erro">
+                        <?= htmlspecialchars($erro) ?>
+                    </div>
+                <?php endif; ?>
+
+                <form method="POST">
+
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+                    <button type="submit">Entrar no sistema</button>
+
+                </form>
+
+            </div>
+
+            <div class="login-rodape">
+                <span>ETECVAV</span>
+                <p>Gestão Gráfica &copy; <?= date('Y') ?></p>
+            </div>
+
+        </div>
+
     </div>
-</div>
 
 </body>
 </html>
