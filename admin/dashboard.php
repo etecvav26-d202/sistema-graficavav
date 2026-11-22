@@ -1,14 +1,14 @@
 
 <?php
-require_once 'includes/auth.php';
-require_once 'config/conexao.php';
+require_once '../includes/auth.php';
+require_once '../config/conexao.php';
 
 $totalClientes = $pdo->query("SELECT COUNT(*) FROM clientes WHERE ativo = 1")->fetchColumn();
 $totalProdutos = $pdo->query("SELECT COUNT(*) FROM produtos WHERE ativo = 1")->fetchColumn();
 $totalPedidos = $pdo->query("SELECT COUNT(*) FROM pedidos")->fetchColumn();
 $totalFuncionarios = $pdo->query("SELECT COUNT(*) FROM funcionarios WHERE ativo = 1")->fetchColumn();
 
-require_once 'includes/header.php';
+require_once '../includes/header.php';
 ?>
 
 <h1>Painel Principal</h1>
