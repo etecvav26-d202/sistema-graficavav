@@ -12,6 +12,7 @@ if ($_SESSION['nivel_acesso'] !== 'administrador') {
 $mensagem = '';
 $funcionarioEditar = null;
 
+
 // Cadastrar ou editar funcionário
 if (isset($_POST['salvar'])) {
 
@@ -23,50 +24,63 @@ if (isset($_POST['salvar'])) {
     $nivel = $_POST['nivel_acesso'];
     $senha = $_POST['senha'];
 
-    if ($id == '') {
+    // Verificar se o e-mail já está cadastrado
+    $sql = "SELECT idfuncionario FROM funcionarios WHERE email = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$email]);
+    $emailExistente = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+    if ($emailExistente && $emailExistente['idfuncionario'] != $id) {
 
-        $sql = "INSERT INTO funcionarios
-        (nome, email, telefone, cargo, senha_hash, nivel_acesso)
-        VALUES (?, ?, ?, ?, ?, ?)";
-
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            $nome, $email, $telefone, $cargo, $senhaHash, $nivel
-        ]);
+        $mensagem = "Este e-mail já está cadastrado. Utilize outro endereço.";
 
     } else {
 
-        if ($senha != '') {
+        if ($id == '') {
+
             $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-            $sql = "UPDATE funcionarios SET
-            nome = ?, email = ?, telefone = ?, cargo = ?,
-            senha_hash = ?, nivel_acesso = ?
-            WHERE idfuncionario = ?";
+            $sql = "INSERT INTO funcionarios
+            (nome, email, telefone, cargo, senha_hash, nivel_acesso)
+            VALUES (?, ?, ?, ?, ?, ?)";
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
-                $nome, $email, $telefone, $cargo,
-                $senhaHash, $nivel, $id
+                $nome, $email, $telefone, $cargo, $senhaHash, $nivel
             ]);
 
         } else {
-            $sql = "UPDATE funcionarios SET
-            nome = ?, email = ?, telefone = ?, cargo = ?,
-            nivel_acesso = ?
-            WHERE idfuncionario = ?";
 
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute([
-                $nome, $email, $telefone, $cargo, $nivel, $id
-            ]);
+            if ($senha != '') {
+                $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+                $sql = "UPDATE funcionarios SET
+                nome = ?, email = ?, telefone = ?, cargo = ?,
+                senha_hash = ?, nivel_acesso = ?
+                WHERE idfuncionario = ?";
+
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    $nome, $email, $telefone, $cargo,
+                    $senhaHash, $nivel, $id
+                ]);
+
+            } else {
+                $sql = "UPDATE funcionarios SET
+                nome = ?, email = ?, telefone = ?, cargo = ?,
+                nivel_acesso = ?
+                WHERE idfuncionario = ?";
+
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    $nome, $email, $telefone, $cargo, $nivel, $id
+                ]);
+            }
         }
-    }
 
-    header("Location: funcionarios.php");
-    exit;
+        header("Location: funcionarios.php");
+        exit;
+    }
 }
 
 // Desativar funcionário
