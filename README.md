@@ -2,6 +2,8 @@
 
 Sistema web desenvolvido para auxiliar no gerenciamento interno de uma gráfica, permitindo organizar funcionários, clientes, produtos, serviços, pedidos, vendas e estoque.
 
+> **Atenção:** os arquivos e atualizações do projeto estão disponíveis exclusivamente na branch `beta` do repositório. A branch `main` não contém a versão atual do sistema.
+
 ## 🎯 Objetivo
 
 Desenvolver um sistema de gerenciamento que facilite o controle das atividades de uma gráfica, centralizando informações e tornando os processos administrativos mais organizados e eficientes.
@@ -48,7 +50,30 @@ sistema-graficavav/
 │   ├── produtos.php
 │   ├── servicos.php
 │   ├── pedidos.php
-│   ├── estoque
+│   ├── estoque.php
+│   └── relatorios.php
+│
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── img/
+│
+├── config/
+│   └── conexao.php
+│
+├── database/
+│   └── graficavav.sql
+│
+├── includes/
+│   ├── header.php
+│   ├── footer.php
+│   ├── auth.php
+│   └── funcoes.php
+│
+├── index.php
+├── login.php
+├── logout.php
+└── README.md
 ```
 
 ## 👨‍💻 Autores
