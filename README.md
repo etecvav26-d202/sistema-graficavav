@@ -83,6 +83,7 @@ sistema-graficavav/
 | [Alice Gimenez Siqueira](https://github.com/alice-gimenez) | 02 | 2º ano D |
 | [Alice Rasmussen Rezende Alves](https://github.com/alicerez0703) | 03 | 2º ano D |
 | [Amanda Neves Oliveira](https://github.com/amandanevoli) | 04 | 2º ano D |
+| [Ana Lívia Takeyama Romanato](https://github.com/liviatakeyama) | 06 | 2º ano D |
 | [Isabelli Dias da Silva](https://github.com/isabelbelli) | 19 | 2º ano D |
 
 ## 
