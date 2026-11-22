@@ -1,3 +1,4 @@
+
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -17,30 +18,74 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <aside class="sidebar">
+    <aside class="sidebar">
 
-            <div class="logo">
-                <h2>Gestão Gráfica</h2>
-                <span>EtecVAV</span>
+        <div class="logo">
+
+            <div class="logo-imagem">
+                <img src="../assets/img/logo-etec.png"
+                     alt="Logo da Etec">
             </div>
 
-            <nav>
-                <a href="dashboard.php">Início</a>
-                <a href="funcionarios.php">Funcionários</a>
-                <a href="clientes.php">Clientes</a>
-                <a href="produtos.php">Produtos</a>
-                <a href="servicos.php">Serviços</a>
-                <a href="pedidos.php">Pedidos e Vendas</a>
-                <a href="estoque.php">Estoque</a>
-                <a href="relatorios.php">Relatórios</a>
-            </nav>
+            <h2>Gestão Gráfica</h2>
+            <span>ETECVAV</span>
 
-            <div class="sidebar-footer">
-                <a href="../logout.php">Sair do sistema</a>
-            </div>
+            <div class="logo-linha"></div>
 
-        </aside>
+        </div>
 
-        <main class="content">
+        <nav class="menu">
+
+            <a href="dashboard.php"
+               class="<?= $paginaAtual == 'dashboard.php' ? 'active' : '' ?>">
+                <span>⌂</span> Início
+            </a>
+
+            <a href="funcionarios.php"
+               class="<?= $paginaAtual == 'funcionarios.php' ? 'active' : '' ?>">
+                <span>♙</span> Funcionários
+            </a>
+
+            <a href="clientes.php"
+               class="<?= $paginaAtual == 'clientes.php' ? 'active' : '' ?>">
+                <span>♧</span> Clientes
+            </a>
+
+            <a href="produtos.php"
+               class="<?= $paginaAtual == 'produtos.php' ? 'active' : '' ?>">
+                <span>▣</span> Produtos
+            </a>
+
+            <a href="servicos.php"
+               class="<?= $paginaAtual == 'servicos.php' ? 'active' : '' ?>">
+                <span>⚙</span> Serviços
+            </a>
+
+            <a href="pedidos.php"
+               class="<?= $paginaAtual == 'pedidos.php' ? 'active' : '' ?>">
+                <span>▤</span> Pedidos e Vendas
+            </a>
+
+            <a href="estoque.php"
+               class="<?= $paginaAtual == 'estoque.php' ? 'active' : '' ?>">
+                <span>▦</span> Estoque
+            </a>
+
+            <a href="relatorios.php"
+               class="<?= $paginaAtual == 'relatorios.php' ? 'active' : '' ?>">
+                <span>▥</span> Relatórios
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../logout.php">
+                <span>↪</span> Sair
+            </a>
+        </div>
+
+    </aside>
+
+    <main class="content">
